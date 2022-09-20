@@ -23,7 +23,7 @@ function OrderSummaryHero({ completed }: PropType) {
         )}
       </div>
       {completed ? (
-        <div className="mx-auto mt-5 border-dashed border-[#4361EE] border-2 h-14 text-center p-2 rounded w-11/12 bg-[#4362ee2c]">
+        <div className="m-4 mb-8 mx-auto mt-5 border-dashed border-[#4361EE] border-2 h-14 text-center p-2 rounded w-11/12 bg-[#4362ee2c]">
           <div className="text-[#4e6cf6] font-bold inline-block m-1">Note:</div>
           Your order for the past 24 hrs
         </div>

@@ -5,7 +5,7 @@ interface PropType {
 }
 function ScreenFrame({ children }: PropType) {
   return (
-    <div className=" h-[850px] w-[400px] m-4 rounded border-2 border-x-black border-solid">
+    <div className="relative h-[850px] w-[400px] m-4 rounded border-2 border-x-black border-solid">
       {children}
     </div>
   );
