@@ -4,8 +4,8 @@ import Screen2 from "./Components/Screen2"
 export default function App() {
   return (
     <Container>
-      <Screen1/>
       <Screen2/>
+      <Screen1/>
     </Container>
   )
 }
