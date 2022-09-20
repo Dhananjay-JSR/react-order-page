@@ -47,7 +47,7 @@ function OrderSummaryHero({ completed }: PropType) {
             GRAND TOTAL <div className="text-[#4361EE] float-right">₹500 </div>
           </div>
         </div>
-        <div className="mt-5 flex-grow border-t border-[#8f8f8f] border-solid"></div>
+        <div className="mt-5 flex-grow border-t border-[#b7b7b78b] border-solid"></div>
         </div>
       )}
     </>

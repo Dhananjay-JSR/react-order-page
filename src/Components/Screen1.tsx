@@ -11,10 +11,10 @@ function Screen1() {
         <Navbar date={'9:41'}/>
         <OrderSummaryHero />
         <div className='h-[43%] overflow-y-hidden'>
-        <OrderListComponent type1='prepared' />
-        <OrderListComponent type1='unavailable' />
-        <OrderListComponent type1='prepared'/>
-        <OrderListComponent type1='prepared'/>
+        <OrderListComponent CookType='prepared' FoodName={"Chicken Biriyani"} Quantity={2} Price={170}  />
+         <OrderListComponent CookType='unavailable' FoodName={"Mutton Biriyani"} Price={210}/>
+        <OrderListComponent CookType='prepared' FoodName={"Chicken Biriyani"} Quantity={2} Price={170}/>
+        <OrderListComponent CookType='prepared' FoodName={"Mutton Biriyani"} Quantity={1} Price={210}/> 
         </div>
         <Footer/>
     </Frame>

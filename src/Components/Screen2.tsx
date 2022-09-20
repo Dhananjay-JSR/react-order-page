@@ -9,9 +9,9 @@ function Screen2() {
     <Frame>
          <Navbar date={'9:41'}/>
          <OrderSummaryHero completed/>
-         <OrderListComponent completed type='prepared'/>
-         <OrderListComponent  completed type='served'/>
-         <OrderListComponent completed  type='pending'/>
+         <OrderListComponent completed CookType='prepared' FoodName={"Order 1"} ID={1234567890} Price={500}/>
+         <OrderListComponent  completed CookType='served'FoodName={"Order 2"} ID={1234567890} Price={220}/>
+         <OrderListComponent completed  CookType='pending'FoodName={"Order 3"} ID={1234567890} Price={220}/>
     </Frame>
   )
 }
