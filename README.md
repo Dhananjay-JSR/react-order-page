@@ -10,7 +10,10 @@ You will also see any lint errors in the console.
 
 ### `Comparison`
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FjkUtNJkLyIICuxPimFkpu4%2Fassignment%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+![image](https://user-images.githubusercontent.com/47073516/191358837-c88fecdd-ac5d-4399-8850-de86ee09f844.png)
+
+![image](https://user-images.githubusercontent.com/47073516/191358871-21c2438d-d7ed-42ef-9448-0964c72a0f68.png)
+
 
 
 [FIGMA LINK](https://www.figma.com/file/jkUtNJkLyIICuxPimFkpu4/assignment?node-id=0%3A1)
