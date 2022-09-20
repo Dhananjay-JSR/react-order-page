@@ -15,6 +15,6 @@ You will also see any lint errors in the console.
 ![image](https://user-images.githubusercontent.com/47073516/191358871-21c2438d-d7ed-42ef-9448-0964c72a0f68.png)
 
 
-
+[DEPLOYED LINK](https://react-order-page.vercel.app/)
 [FIGMA LINK](https://www.figma.com/file/jkUtNJkLyIICuxPimFkpu4/assignment?node-id=0%3A1)
 
