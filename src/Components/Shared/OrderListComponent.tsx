@@ -1,28 +1,34 @@
 import React from "react";
-import food from "./misc/food.png"
+import food from "./misc/food.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faArrowRightLong
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-type ConditionalProps =| {
+type ConditionalProps =
+  | {
       completed?: never;
       CookType: "prepared" | "unavailable";
-      Quantity?:Number;
-      ID?:never;
-      FoodName:String;
-      Price:Number;
-    } 
+      Quantity?: Number;
+      ID?: never;
+      FoodName: String;
+      Price: Number;
+    }
   | {
       completed: boolean;
       CookType: "prepared" | "served" | "pending";
-      Quantity?:never
-      ID:number;
-      FoodName:String;
-      Price:Number;
-    } ;
+      Quantity?: never;
+      ID: number;
+      FoodName: String;
+      Price: Number;
+    };
 
-function OrderListComponent({ CookType, completed,FoodName,Price,Quantity,ID }: ConditionalProps) {
+function OrderListComponent({
+  CookType,
+  completed,
+  FoodName,
+  Price,
+  Quantity,
+  ID,
+}: ConditionalProps) {
   return (
     <>
       {completed ? (
@@ -157,27 +163,35 @@ function OrderListComponent({ CookType, completed,FoodName,Price,Quantity,ID }: 
           </div>
         </div>
       ) : (
-        <div className={` mt-5 mb-5 h-24 w-[95%] grid grid-cols-8 mx-auto rounded-md border-solid  border-2 ${CookType==="unavailable" ? `border-[#D90429]` : `border-[#fce7ab]`} `}>
-                <div className="flex col-span-2 justify-center items-center ">
+        <div
+          className={` mt-5 mb-5 h-24 w-[95%] grid grid-cols-8 mx-auto rounded-md border-solid  border-2 ${
+            CookType === "unavailable" ? `border-[#D90429]` : `border-[#fce7ab]`
+          } `}
+        >
+          <div className="flex col-span-2 justify-center items-center ">
+            {/*" */}
 
-                {/*" */}
-
-                  <div className={`w-max h-max  ${CookType==="unavailable"? `relative z-10 before:bg-no-repeat after:rounded-md after:contents-[''] after:absolute after:w-full after:h-full after:bg-[#00000099] after:top-0 after:left-0  after:z-30           before::rounded-md after:contents-[''] before:absolute before:w-full before:h-full  before:top-0 before:left-0  before:bg-center before:bg-[url("data:image/svg+xml,%3Csvg%20width%3D%2236%22%20height%3D%2234%22%20viewBox%3D%220%200%2036%2034%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M34.2666%2023.5333L23.6%204.33334C22.1666%201.75001%2020.1833%200.333344%2018%200.333344C15.8166%200.333344%2013.8333%201.75001%2012.4%204.33334L1.7333%2023.5333C0.383296%2025.9833%200.233296%2028.3333%201.31663%2030.1833C2.39996%2032.0333%204.5333%2033.05%207.3333%2033.05H28.6666C31.4666%2033.05%2033.6%2032.0333%2034.6833%2030.1833C35.7666%2028.3333%2035.6166%2025.9667%2034.2666%2023.5333ZM16.75%2012C16.75%2011.3167%2017.3166%2010.75%2018%2010.75C18.6833%2010.75%2019.25%2011.3167%2019.25%2012V20.3333C19.25%2021.0167%2018.6833%2021.5833%2018%2021.5833C17.3166%2021.5833%2016.75%2021.0167%2016.75%2020.3333V12ZM19.1833%2026.5167C19.1%2026.5833%2019.0166%2026.65%2018.9333%2026.7167C18.8333%2026.7833%2018.7333%2026.8333%2018.6333%2026.8667C18.5333%2026.9167%2018.4333%2026.95%2018.3166%2026.9667C18.2166%2026.9833%2018.1%2027%2018%2027C17.9%2027%2017.7833%2026.9833%2017.6666%2026.9667C17.5666%2026.95%2017.4666%2026.9167%2017.3666%2026.8667C17.2666%2026.8333%2017.1666%2026.7833%2017.0666%2026.7167C16.9833%2026.65%2016.9%2026.5833%2016.8166%2026.5167C16.5166%2026.2%2016.3333%2025.7667%2016.3333%2025.3333C16.3333%2024.9%2016.5166%2024.4667%2016.8166%2024.15C16.9%2024.0833%2016.9833%2024.0167%2017.0666%2023.95C17.1666%2023.8833%2017.2666%2023.8333%2017.3666%2023.8C17.4666%2023.75%2017.5666%2023.7167%2017.6666%2023.7C17.8833%2023.65%2018.1166%2023.65%2018.3166%2023.7C18.4333%2023.7167%2018.5333%2023.75%2018.6333%2023.8C18.7333%2023.8333%2018.8333%2023.8833%2018.9333%2023.95C19.0166%2024.0167%2019.1%2024.0833%2019.1833%2024.15C19.4833%2024.4667%2019.6666%2024.9%2019.6666%2025.3333C19.6666%2025.7667%2019.4833%2026.2%2019.1833%2026.5167Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A")] before:z-40` : null}  `} >
-            <img alt="Food" className=" h-[100%] w-[100%] rounded-md" src={food}/>
-                  </div>
+            <div
+              className={`w-max h-max  ${
+                CookType === "unavailable"
+                  ? `relative z-10 before:bg-no-repeat after:rounded-md after:contents-[''] after:absolute after:w-full after:h-full after:bg-[#00000099] after:top-0 after:left-0  after:z-30           before::rounded-md after:contents-[''] before:absolute before:w-full before:h-full  before:top-0 before:left-0  before:bg-center before:bg-[url("data:image/svg+xml,%3Csvg%20width%3D%2236%22%20height%3D%2234%22%20viewBox%3D%220%200%2036%2034%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M34.2666%2023.5333L23.6%204.33334C22.1666%201.75001%2020.1833%200.333344%2018%200.333344C15.8166%200.333344%2013.8333%201.75001%2012.4%204.33334L1.7333%2023.5333C0.383296%2025.9833%200.233296%2028.3333%201.31663%2030.1833C2.39996%2032.0333%204.5333%2033.05%207.3333%2033.05H28.6666C31.4666%2033.05%2033.6%2032.0333%2034.6833%2030.1833C35.7666%2028.3333%2035.6166%2025.9667%2034.2666%2023.5333ZM16.75%2012C16.75%2011.3167%2017.3166%2010.75%2018%2010.75C18.6833%2010.75%2019.25%2011.3167%2019.25%2012V20.3333C19.25%2021.0167%2018.6833%2021.5833%2018%2021.5833C17.3166%2021.5833%2016.75%2021.0167%2016.75%2020.3333V12ZM19.1833%2026.5167C19.1%2026.5833%2019.0166%2026.65%2018.9333%2026.7167C18.8333%2026.7833%2018.7333%2026.8333%2018.6333%2026.8667C18.5333%2026.9167%2018.4333%2026.95%2018.3166%2026.9667C18.2166%2026.9833%2018.1%2027%2018%2027C17.9%2027%2017.7833%2026.9833%2017.6666%2026.9667C17.5666%2026.95%2017.4666%2026.9167%2017.3666%2026.8667C17.2666%2026.8333%2017.1666%2026.7833%2017.0666%2026.7167C16.9833%2026.65%2016.9%2026.5833%2016.8166%2026.5167C16.5166%2026.2%2016.3333%2025.7667%2016.3333%2025.3333C16.3333%2024.9%2016.5166%2024.4667%2016.8166%2024.15C16.9%2024.0833%2016.9833%2024.0167%2017.0666%2023.95C17.1666%2023.8833%2017.2666%2023.8333%2017.3666%2023.8C17.4666%2023.75%2017.5666%2023.7167%2017.6666%2023.7C17.8833%2023.65%2018.1166%2023.65%2018.3166%2023.7C18.4333%2023.7167%2018.5333%2023.75%2018.6333%2023.8C18.7333%2023.8333%2018.8333%2023.8833%2018.9333%2023.95C19.0166%2024.0167%2019.1%2024.0833%2019.1833%2024.15C19.4833%2024.4667%2019.6666%2024.9%2019.6666%2025.3333C19.6666%2025.7667%2019.4833%2026.2%2019.1833%2026.5167Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A")] before:z-40`
+                  : null
+              }  `}
+            >
+              <img
+                alt="Food"
+                className=" h-[100%] w-[100%] rounded-md"
+                src={food}
+              />
+            </div>
           </div>
           <div className="col-span-3 p-2 ">
             <div className="font-semibold ">{FoodName}</div>
-            <div className="text-[#a3a7a7] font-semibold">
-            ₹170
-            </div>
-
+            <div className="text-[#a3a7a7] font-semibold">₹170</div>
           </div>
-          {
-            CookType==="prepared" ? (
-                <div className="col-span-3 flex flex-col justify-evenly ">
-               
-                <div className=" w-max bg-[#4362ee29] rounded-xl text-sm px-2 py-1 ">
+          {CookType === "prepared" ? (
+            <div className="col-span-3 flex flex-col justify-evenly ">
+              <div className=" w-max bg-[#4362ee29] rounded-xl text-sm px-2 py-1 ">
                 <div className="text-[#4361EE] inline-block font-medium text-xs">
                   Being prepared
                 </div>
@@ -213,33 +227,35 @@ function OrderListComponent({ CookType, completed,FoodName,Price,Quantity,ID }: 
                     />
                   </svg>
                 </div>
-                
               </div>
               <div className="w-full">
-                  <div className="float-right mr-5 text-red-600 inline-block font-semibold">Qty: 
-                  <div className="inline-block font-bold">
-                   {Quantity!=null? Quantity.toString() : 'NaN'} Nos
-                  </div>
-                   </div>
-                </div>
-              </div>
-              ) : CookType ==="unavailable" ? <div className="col-span-3 flex flex-col justify-evenly ">
-              <div className="w-max ml-auto mr-2 bg-[#ffd7da] rounded-xl text-sm px-4 py-1 ">
-              <div className="text-[#D90429] inline-block font-medium text-xs">
-              Item unavailable
-              </div>
-            </div>
-            <div className="w-full">
                 <div className="float-right mr-5 text-red-600 inline-block font-semibold">
-                <div className="inline-block font-bold text-2xl">
-                 <FontAwesomeIcon icon={faArrowRightLong} />
+                  Qty:
+                  <div className="inline-block font-bold">
+                    {Quantity != null ? Quantity.toString() : "NaN"} Nos
+                  </div>
                 </div>
-                 </div>
               </div>
-            </div> : ""
-          }
-            
             </div>
+          ) : CookType === "unavailable" ? (
+            <div className="col-span-3 flex flex-col justify-evenly ">
+              <div className="w-max ml-auto mr-2 bg-[#ffd7da] rounded-xl text-sm px-4 py-1 ">
+                <div className="text-[#D90429] inline-block font-medium text-xs">
+                  Item unavailable
+                </div>
+              </div>
+              <div className="w-full">
+                <div className="float-right mr-5 text-red-600 inline-block font-semibold">
+                  <div className="inline-block font-bold text-2xl">
+                    <FontAwesomeIcon icon={faArrowRightLong} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
       )}
     </>
   );
